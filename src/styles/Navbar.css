@@ -1,0 +1,106 @@
+/* navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-sizing: border-box; /* Ensure padding doesn't affect the layout */
+}
+
+.navbar-brand h2 {
+  color: #00eaff;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00eaff;
+  margin: 0;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link {
+  color: #a5d6ff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.navbar-link:hover {
+  transform: scale(1.1);
+  color: #33f3ff;
+  background: #212121;
+}
+
+.navbar-link.logout {
+  background-color: #ff4747;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-link.logout:hover {
+  background-color: #ff1c1c;
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px; /* Reduce padding for smaller screens */
+  }
+
+  .navbar-links {
+    gap: 10px;  /* Reduce the gap between the links */
+  }
+
+  .navbar-brand h2 {
+    font-size: 24px;  /* Reduce font size for mobile */
+  }
+
+  .navbar-link {
+    font-size: 16px;  /* Adjust font size for mobile */
+  }
+
+  /* Stack the navbar elements vertically for very small screens */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  /* Center and adjust logout button */
+  .navbar-links .logout {
+    margin-top: 10px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand h2 {
+    font-size: 20px;  /* Further reduce brand font size */
+  }
+
+  .navbar-link {
+    font-size: 14px;  /* Further reduce link font size */
+  }
+
+  .navbar-links .logout {
+    padding: 5px 10px;  /* Reduce button padding */
+  }
+}

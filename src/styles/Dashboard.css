@@ -1,0 +1,237 @@
+/* dashboard.css */
+
+body {
+  background: url('../bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  cursor: url('../cursor.png'), auto; /* Custom cursor */
+}
+
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0d11174f;
+}
+
+.main-content {
+  padding: 80px 20px 20px; /* Adjusted padding */
+  color: #a5d6ff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00eaff;
+  margin-bottom: 20px;
+}
+
+.data-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  background: #161b22af;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.data-form input,
+.data-form select { /* Combined input and select styles */
+  padding: 10px;
+  width: 325px;
+  background: #161b22Af;
+  border: 2px solid #2d3748;
+  border-radius: 5px;
+  color: #ffffff;
+  outline: none;
+}
+.data-form input {
+  width: 300px;
+}
+.data-form input:focus,
+.data-form select:focus { /* Combined focus styles */
+  border-color: #33f3ff;
+  box-shadow: 0 0 8px rgba(51, 243, 255, 0.7);
+}
+
+.data-form button {
+  padding: 10px 20px;
+  background: #00eaff;
+  color: #0d1117;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.data-form button:hover {
+  transform: scale(1.1);
+  background: #33f3ff;
+}
+
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #161b22ca;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #2d3748;
+}
+
+.data-table th {
+  color: #00eaff;
+  font-weight: bold;
+  text-shadow: 0 0 8px #00eaff;
+}
+
+.data-table tbody tr:hover {
+  background-color: #ff00003d;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  background: #ff0800;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: #ff1c1c;
+}
+
+/* Status Dropdown Styling */
+.status-dropdown {
+  background: #0d1117;
+  width: 80px;
+  color: white;
+  padding: 10px; /* Added padding for consistency */
+  border: 2px solid #2d3748; /* Added border */
+  border-radius: 5px; /* Added border-radius */
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e"); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+  padding-right: 30px; /* Adjust padding for arrow */
+}
+
+.status-dropdown:focus {
+  border-color: #33f3ff;
+  box-shadow: 0 0 8px rgba(51, 243, 255, 0.7);
+  outline: none; /* Remove default focus outline */
+}
+
+.status-dropdown option {
+  background: #161b22;
+  color: white;
+}
+
+.status-dropdown option:hover {
+  background: #00eaff;
+  color: #0d1117;
+}
+
+
+/* Removed redundant or unnecessary styles */
+/* Removed custom scrollbar styles (let the browser handle it) */
+/* Removed explicit cursor styles for <a> and <button> (use default or CSS cursor property) */
+/* Removed unnecessary comments */
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 80px; /* Adjusted padding */
+  }
+
+  .data-form input,
+  .data-form select,
+  .data-form button {
+    width: 90%; /* Make form elements responsive */
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .status-dropdown {
+    width: 100%; /* Make dropdown responsive */
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+/* Search Bar Styling */
+.search-container {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically center the input and button */
+  margin-bottom: 20px; /* Add some space below the search bar */
+  width: 300px; /* Set a specific width for the search bar */
+  margin: 20px auto;
+  color: #0d1117; /* Center the search bar horizontally */
+}
+
+.search-input {
+  flex-grow: 1; /* Allow input to take up available space */
+  padding: 10px;
+  border: 2px solid #2d3748;
+  border-radius: 5px 0 0 5px; /* Rounded corners on the left */
+  background: #000000af;
+  color: #00eaff;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #33f3ff;
+  box-shadow: 0 0 8px rgba(51, 243, 255, 0.7);
+}
+
+.search-button {
+  padding: 10px 15px;
+  background: #00eaff;
+  border: none;
+  border-radius: 0 5px 5px 0; /* Rounded corners on the right */
+  cursor: pointer;
+  outline: none; /* Remove default focus outline */
+}
+
+.search-button:hover {
+  background: #33f3ff;
+}
+
+/* Optional: Add a magnifying glass icon to the button */
+.search-button::before {
+  content: "\f002"; /* Unicode for magnifying glass icon */
+  font-family: "FontAwesome"; /* Or your preferred icon font */
+  margin-right: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .search-container {
+    width: 90%; /* Make search bar responsive on smaller screens */
+  }
+}
